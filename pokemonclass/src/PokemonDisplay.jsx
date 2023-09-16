@@ -2,7 +2,7 @@ import React from "react";
 // Capital R in the 'from' bit is an error
 // import React from "React";
 
-// Extends form Component to make sure that this works as a React Component
+// Extend from Component to make sure that this works as a React Component
 export default class PokemonDisplay extends React.Component{
     constructor(props){
         super(props);
@@ -13,6 +13,16 @@ export default class PokemonDisplay extends React.Component{
         }
     }
 
+    componentDidMount(){
+        console.log("This message will appear once");
+    }
+
+    componentWillUnmount(){
+        console.log("Component is being removed from the page.");
+    }
+
+    // Render is how we return JSX up to the React app
+    // so that something is displayed in the browser
     render(){
         return (
             <div>
