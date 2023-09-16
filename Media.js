@@ -2,9 +2,10 @@
 // Media class as common starting point for
 // things like DVDs, books, vinyl
 
+// Blueprint of data
 class Media {
-    constructor(){
-        this.name = "Default generic media"
+    constructor(someNewName){
+        this.name = someNewName;
 
         Media.count++;
     }
@@ -27,18 +28,22 @@ class Media {
 }
 
 // Instance of the blueprint
-let someMedia = new Media();
-someMedia.name = "Cool generic media";
-console.log(someMedia.name);
-console.log(someMedia.version());
+// let someMedia = new Media();
+// someMedia.name = "Cool generic media";
+// console.log(someMedia.name);
+// console.log(someMedia.version());
 
-console.log(Media.version());
-console.log(Media.prototype.version());
+// console.log(Media.version());
+// console.log(Media.prototype.version());
 
-// let arrayLength = Array.length();
-// arrayLength = some ArrayVariable.length;
+// // let arrayLength = Array.length();
+// // arrayLength = some ArrayVariable.length;
 
-let someOtherMedia = new Media();
-console.log(someOtherMedia.name);
+// let someOtherMedia = new Media();
+// console.log(someOtherMedia.name);
 
-console.log(`Media library has ${Media.count} items.`)
+// console.log(`Media library has ${Media.count} items.`)
+
+module.exports = {
+    Media
+}
